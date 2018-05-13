@@ -38,7 +38,7 @@ defmodule HoTTPotato.Message.Header.DateTest do
     assert HeaderDate.day_of_month(10) == "10"
   end
 
-  test "&day_of_week/1" do
+  test "&day_of_week/3" do
     assert HeaderDate.day_of_week(2018, 5, 1) == "Tue"
     assert HeaderDate.day_of_week(2018, 5, 2) == "Wed"
     assert HeaderDate.day_of_week(2018, 5, 3) == "Thu"
