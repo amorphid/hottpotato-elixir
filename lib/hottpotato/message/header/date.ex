@@ -35,7 +35,7 @@ defmodule HeaderDate do
   ##########################
 
   @doc false
-  @spec day_of_month(Integer.t()) :: String.t()
+  @spec day_of_month(non_neg_integer()) :: String.t()
   def day_of_month(int)
 
   def day_of_month(int) when int < 10, do: "0#{int}"
@@ -43,7 +43,7 @@ defmodule HeaderDate do
   def day_of_month(int), do: "#{int}"
 
   @doc false
-  @spec day_of_week(Integer.t(), Integer.t(), Integer.t()) :: String.t()
+  @spec day_of_week(non_neg_integer(), non_neg_integer(), non_neg_integer()) :: String.t()
   def day_of_week(year, month, day) do
     case Calendar.ISO.day_of_week(year, month, day) do
       1 -> "Mon"
@@ -57,7 +57,7 @@ defmodule HeaderDate do
   end
 
   @doc false
-  @spec hour(Integer.t()) :: String.t()
+  @spec hour(non_neg_integer()) :: String.t()
   def hour(int)
 
   def hour(int) when int < 10, do: "0#{int}"
@@ -65,7 +65,7 @@ defmodule HeaderDate do
   def hour(int), do: "#{int}"
 
   @doc false
-  @spec minute(Integer.t()) :: String.t()
+  @spec minute(non_neg_integer()) :: String.t()
   def minute(int)
 
   def minute(int) when int < 10, do: "0#{int}"
@@ -73,7 +73,7 @@ defmodule HeaderDate do
   def minute(int), do: "#{int}"
 
   @doc false
-  @spec month(Integer.t()) :: String.t()
+  @spec month(non_neg_integer()) :: String.t()
   def month(int) do
     case int do
       1 -> "Jan"
@@ -92,7 +92,7 @@ defmodule HeaderDate do
   end
 
   @doc false
-  @spec second(Integer.t()) :: String.t()
+  @spec second(non_neg_integer()) :: String.t()
   def second(int)
 
   def second(int) when int < 10, do: "0#{int}"
@@ -100,7 +100,7 @@ defmodule HeaderDate do
   def second(int), do: "#{int}"
 
   @doc false
-  @spec year(Integer.t()) :: String.t()
+  @spec year(non_neg_integer()) :: String.t()
   def year(int)
 
   def year(int) when int < 10, do: "000#{int}"
