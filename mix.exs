@@ -23,7 +23,9 @@ defmodule HoTTPotato.MixProject do
   defp deps do
     [
       # static analysis
-      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false}
+      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
+      # doc generation
+      {:ex_doc, ">= 0.0.0", only: [:dev], runtime: false}
     ]
   end
 end
